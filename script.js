@@ -9,6 +9,8 @@ const registrationStatus = document.querySelector("#registration-status");
 const registrationSummary = document.querySelector("#registration-summary");
 const registrationEmailLink = document.querySelector("#registration-email-link");
 const registrationStatusCopy = document.querySelector("#registration-status-copy");
+const tryoutRegistrationUrl = "https://system.gotsport.com/programs/16582P471";
+const seasonRegistrationUrl = "https://system.gotsport.com/programs/I34748514";
 
 const registrationDraftKey = "cal-victory-registration-draft";
 const registrationSubmissionsKey = "cal-victory-registration-submissions";
@@ -134,9 +136,9 @@ function updateRegistrationStatus(summary) {
   registrationStatus.querySelector(".status-kicker").textContent = "Registration Captured";
   registrationStatus.querySelector("h3").textContent = "New player registration recorded.";
   registrationStatusCopy.textContent =
-    "The intake summary has been saved in this browser. Keep it for the club's official GotSport registration link until the direct Cal Victory FC URL is added.";
+    "The intake summary has been saved in this browser. Keep it for the club's official 2026/2027 registration flow in GotSport.";
   registrationSummary.textContent = summary;
-  registrationEmailLink.href = "https://www.gotsport.com";
+  registrationEmailLink.href = seasonRegistrationUrl;
 }
 
 if (registrationForm) {
@@ -189,10 +191,9 @@ if (clearRegistrationButton && registrationForm) {
       registrationStatus.querySelector(".status-kicker").textContent = "Awaiting Submission";
       registrationStatus.querySelector("h3").textContent = "Player registration is ready.";
       registrationStatusCopy.textContent =
-        "Complete the intake form and keep the summary ready for the club's official GotSport registration link.";
+        "Complete the intake form and keep the summary ready for the club's official 2026/2027 registration link.";
       registrationSummary.textContent = "No registration submitted yet.";
-      registrationEmailLink.href =
-        "https://www.gotsport.com";
+      registrationEmailLink.href = seasonRegistrationUrl;
     }
   });
 }
