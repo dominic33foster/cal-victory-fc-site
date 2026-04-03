@@ -1092,6 +1092,28 @@ a {
   font-weight: 700;
 }
 
+.academy-visual {
+  margin: 1.25rem 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(39, 76, 168, 0.14);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.academy-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.academy-caption {
+  margin: 0;
+  padding: 0.95rem 1rem 1.05rem;
+  color: var(--muted);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
 .academy-notes {
   display: grid;
   gap: 1rem;
@@ -1303,6 +1325,7 @@ a {
   }
 
   .gallery-card img,
+  .academy-photo,
   .staff-photo {
     aspect-ratio: auto;
   }
